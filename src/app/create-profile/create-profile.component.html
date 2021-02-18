@@ -1,0 +1,46 @@
+
+<div class="container">
+  <h2 class="text-center">Create ICEP Profile</h2>
+<span></span>
+<form class="bootstrap-form-validation">
+  <div class="form-group">
+    <label for="firstname">Student Number</label>
+    <input [(ngModel)]="createProfileData.ap_studentno" class="form-control input-box" type="text" ng-model="studentNum" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="firstname">Specialization</label>
+    <input [(ngModel)]="createProfileData.ap_special_id" class="form-control" type="text" ng-model="specialization" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="first name">First Name</label>
+    <input [(ngModel)]="createProfileData.ap_firstname" class="form-control" type="text" ng-model="firstname" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input [(ngModel)]="createProfileData.ap_lastname" class="form-control" type="text" ng-model="lastname" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="id">Identity number</label>
+    <input [(ngModel)]="createProfileData.ap_idno" class="form-control" type="text" ng-model="idNum" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input [(ngModel)]="createProfileData.ap_address" class="form-control" type="text" ng-model="address" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="contact number">Contact Number</label>
+    <input [(ngModel)]="createProfileData.ap_contactno" class="form-control" type="text" ng-model="pNum" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [(ngModel)]="createProfileData.ap_email" class="form-control" type="email" ng-model="email" ng-required="true">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input [(ngModel)]="createProfileData.ap_password" class="form-control" type="pasword" ng-model="password" ng-required="true">
+  </div>
+  <div class="form-group">
+    <button (click)="createProfile()" class="btn btn-primary" type="submit">Submit</button>
+   </div>
+</form>
+</div>
