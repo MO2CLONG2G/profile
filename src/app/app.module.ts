@@ -20,8 +20,8 @@ import { ProfileService } from './profile.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    NgModule
+    HttpClientModule
+  
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

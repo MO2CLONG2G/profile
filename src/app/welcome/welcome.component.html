@@ -1,79 +1,73 @@
+<head>
+  <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
+</head>
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">ICEP Profile</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">
+      <li class="nav-item active badge-primary" style="margin-right: 15px;">
+        <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="">
           <i class="fa fa-home"></i>
-          Home
-          <span class="sr-only">(current)</span>
-          </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fa fa-envelope-o">
-            <span class="badge badge-danger">11</span>
-          </i>
-          Link
+          Dashboard
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">
-          <i class="fa fa-envelope-o">
-            <span class="badge badge-warning">11</span>
-          </i>
-          Disabled
-        </a>
+      <li class="nav-item badge-primary active" style="margin-right: 15px;">
+        <a class="nav-link" [routerLink]="['/profile']" routerLinkActive="">
+          Profile </a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-envelope-o">
-            <span class="badge badge-primary">11</span>
-          </i>
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <li class="nav-item badge-primary active" style="margin-right: 15px;">
+        <a class="nav-link" [routerLink]="['/Announcement']" routerLinkActive="">
+          Announcement</a>
       </li>
+      <!-- <li class="nav-item active dropdown badge-primary">
+        <a class="nav-link" [routerLink]="['/something']" routerLinkActive="">Something</a>
+      </li> -->
     </ul>
     <ul class="navbar-nav ">
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fa fa-bell">
-            <span class="badge badge-info">11</span>
-          </i>
-          Test
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" [routerLink]="['/notification']" routerLinkActive="">
           <i class="fa fa-globe">
-            <span class="badge badge-success">11</span>
-          </i>
-          Test
-        </a>
+          </i>Notification<span class="badge badge-primary active">11</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0 active" type="submit" style="margin-right: 15px;">Search Job</button>
     </form>
+    <ul class="navbar-nav">
+      <li class="nav-item badge-primary active">
+        <a [routerLink]="['/']" routerLinkActive="" class="nav-link">
+          Logout <i class="fa fa-signout"></i>
+        </a>
+      </li>
+    </ul>
   </div>
+
 </nav>
+
+<!-- <div class="sidenav" style="width: 35%;">
+   <img src="..
+    /../assets/images/profile_photo/" . $_SESSION[photo_id] alt="Profile photo couldn't load" class="round">
+  <div class="card" style="width: 35%; float: left; height: 100%;">
+    <a href="" class="padding-4">Profile</a>
+    <a href="" class="padding-4">Your CV</a>
+    <a href="" class="padding-4">Documents</a>
+    <a href="" class="padding-4">...</a>
+    <a href="" class="padding-4">Vacancies</a>
+    <a href="" class="padding-4">Application Status</a>
+  </div>
+</div> -->
+
 <div class="container">
   <h2 class="text-center">ICEP Portal</h2>
-
   <br>
   <br>
-  <div style="float: right;">
+  <!-- <div style="float: right;">
     <table>
       <tr>
         <th>Student Number: &nbsp;
@@ -133,22 +127,90 @@
       </tr>
 
 
-        </table>
+    </table>
 
-        <button type="submit" class="reg_btn">Edit your details </button>
+    <button type="submit" class="reg_btn">Edit your details </button>
 
+  </div> -->
+  
 
-
-
-
-  </div>
-
-  <div>
-
-    <div>
-      <button type="submit" class="reg_btn">Apply for internship </button>
+  <div class="choose_section_2">
+    <div class="container" style="max-width: max-content">        
+      <div class="row">
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/profile']" routerLinkActive="">
+            <div class="icon"><i class="fa fa-id-card xxlarge"></i></div>
+            <h2 class="totaly_text">Update Profile</h2>
+            <p class="making">Edit your personal details, educational, skills and view documents section.</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/cvUpdate']" routerLinkActive="">
+            <div class="icon"><i class="fa fa-edit xxlarge"></i></div>
+            <h2 class="hosting_text">Update CV</h2>
+            <p class="justo_text"> View, download and print your CV. You upload an updated CV.</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/document']" routerLinkActive="">
+            <div class="icon"><i class="fa fa-upload xxlarge"></i></div>
+            <h2 class="totaly_text">Upload Documents</h2>
+            <p class="making">View, download and print your documents. You upload an updated documents.</p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-
-
+  
+  <div class="choose_section_2">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/Vacancies']" routerLinkActive="">
+            <div class="icon"><i class=" xxlarge"></i></div>
+            <h2 class="totaly_text">View Vacancies</h2>
+            <p class="making">View available detailed vacancies and submit application.</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/applicationStatus']" routerLinkActive="">
+            <div class="icon"><i class="fa fa-copy xxlarge"></i></div>
+            <h2 class="totaly_text">Application Status</h2>
+            <p class="making">View Your application status. Reason for the status of your application.</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a class="about_inner" [routerLink]="['/accountSettings']" routerLinkActive="">
+            <div class="icon"><i class="fa fa-cog xxlarge"></i></div>
+            <h2 class="totaly_text">Account Settings</h2>
+            <p class="making">view your profile settings and edit the features for the account privacy.</p>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="bt_main">
+        <button class="read_more"><a href="#">Read More</a></button>
+      </div> -->
+    </div>
+  </div>  
+</div>
+  <footer class="footer-box">
+    <div class="container">
+      <div class="row">  
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="footer_blog full white_fonts">
+            <h3>Contact us</h3>
+            <ul class="full">
+              <li><img src="../../assets/images/i5.png"><span>2 Aubrey Matlakala St,<br> Soshanguve,<br> Pretoria, 0001</span></li>
+              <li><img src="../../assets/../../assets/images/i6.png"><span>general@tut.ac.za</span></li>
+              <li><img src="../../assets/images/i7.png"><span>+2786 110 2421</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<div class="copyright_main bg-dark">
+  <div class="container">
+    <p class="copy_text">© 2020 All Rights Reserved. <a href="#">ICEP WEBSITE</a></p>
+  </div>
 </div>
